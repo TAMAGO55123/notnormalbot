@@ -1,0 +1,2 @@
+# notnormalbot
+ｽﾋﾟｷ
