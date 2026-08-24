@@ -14,11 +14,12 @@ class ThreadCog(commands.Cog):
 
     @commands.Cog.listener()
     async def on_thread_create(self, thread: discord.Thread):
-        roles = [
-            1541426163682119700
-        ]
-        mes = await thread.send(content=" ".join([f"<@&{i}>" for i in roles]))
-        await mes.edit(content="ﾁｮﾜﾖ!")
+        if thread.guild.id == 1541248982712328287:
+            roles = [
+                1541426163682119700
+            ]
+            mes = await thread.send(content=" ".join([f"<@&{i}>" for i in roles]))
+            await mes.edit(content="ﾁｮﾜﾖ!")
 
 async def setup(bot):
     await bot.add_cog(ThreadCog(bot))
